@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pet IDF - Image Viewer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-scope" content="profile email" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.19.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pet IDF Image Viewer</h1>
+
+      <!-- Google Sign-In Button -->
+      <div
+        id="g_id_onload"
+        data-client_id="1051032406098-1pe5c0kijvev5elo0a6sg1ivl90t6269.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-callback="onSignIn"
+        data-auto_prompt="false"
+      ></div>
+      <div class="g_id_signin" data-type="standard"></div>
+
+      <!-- Viewer for Images -->
+      <div id="viewer" class="viewer"></div>
+      <div id="output" class="output"></div>
+    </div>
+  </body>
+</html>
