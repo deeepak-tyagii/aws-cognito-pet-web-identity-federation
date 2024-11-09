@@ -107,13 +107,12 @@ This advanced demo consists of 6 stages :-
 #### Step 3A: Create a Cognito Identity Pool
 1. Go to the [Cognito Console](https://console.aws.amazon.com/cognito/home?region=us-east-1#).
 2. In the left menu, select **Federated Identities** and click **Create new identity pool**.
-3. Name the pool **PetIDFIDPool**, expand **Authentication Providers**, and select **Google+**.
+3. Name the pool **WebIDF**, expand **Authentication Providers**, and select **Google**.
 4. Enter your **Google Client ID** from Stage 2.
 5. Click **Create Pool** and note the **Identity Pool ID**.
 
 #### Step 3B: Set Permissions
-1. Cognito will create two IAM roles: one for authenticated and one for unauthenticated identities.
-2. Click **Allow** to proceed without modifying the roles.
+1. Cognito will create IAM role: for authenticated identities.
 
 #### Step 3C: Adjust IAM Permissions for Private Bucket Access
 1. Go to the [IAM Console](https://console.aws.amazon.com/iam/home?region=us-east-1#/home).
@@ -157,6 +156,29 @@ If issues arise with signing in, try invalidating the cache:
 2. Click **Create invalidation**, enter `/index.html` and `/scripts.js`, and confirm.
 
 **Stage 4 Complete**: You now have a fully functional serverless application that uses Google OAuth for authentication and AWS services for storage and identity management.
+Certainly! Here is a blog and README section specifically for **Stage 5: Tearing Down the Serverless Application Resources**.
+
+---
+
+### Stage 5: Deleting Resources for the PetIDF Serverless Application
+
+To safely remove all resources for the **PetIDF Serverless Application**, follow these steps:
+
+1. **Delete Google API Project**:
+   - Visit [Google Cloud Console](https://console.developers.google.com/cloud-resource-manager), locate **PetIDF**, and delete it.
+
+2. **Delete Cognito Identity Pool**:
+   - In the [AWS Cognito Console](https://console.aws.amazon.com/cognito/home?region=us-east-1), delete the **WebIDF** identity pool.
+
+3. **Delete IAM Roles**:
+   - In [IAM Console](https://console.aws.amazon.com/iam/home?region=us-east-1#/home), remove roles starting with **CognitoRole_PetIDF**.
+
+4. **Delete CloudFormation Stack**:
+   - In [CloudFormation Console](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks), delete the **PetWebIDF** stack.
+
+By completing these steps, all application resources will be fully deleted. 
+
+These instructions should help you quickly remove your PetIDF application resources with confidence. Let me know if you'd like any more details!
 
 ---
 
