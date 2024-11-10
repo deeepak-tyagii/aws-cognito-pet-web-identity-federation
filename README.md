@@ -33,6 +33,8 @@ This advanced demo consists of 6 stages :-
 - STAGE 4 : Update App Bucket & Test Application
 - STAGE 5 : Cleanup the account
 
+![Architecture Diagram](pet-web-IDF-arch-diagram.gif)
+
 ---
 
 ## Prerequisites
