@@ -33,6 +33,8 @@ This advanced demo consists of 6 stages :-
 - STAGE 4 : Update App Bucket & Test Application
 - STAGE 5 : Cleanup the account
 
+  ## Checkout detailed Step to Step Guide here - [Medium Blog](https://deepak-tyagi.medium.com/pet-image-viewer-building-a-secure-serverless-app-with-web-identity-federation-using-aws-cognito-7c8e4bb78587)
+
 ![Architecture Diagram](pet-web-IDF-arch-diagram.gif)
 
 ---
